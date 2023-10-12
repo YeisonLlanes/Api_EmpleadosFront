@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using primerApiFront.Models;
+using System.Text.Json.Serialization;
 
 namespace primerApiFront.Controllers
 {
