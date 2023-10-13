@@ -1,7 +1,17 @@
+using primerApiFront.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton(new HttpClient
+{
+    BaseAddress = new Uri(uriString: builder.Configuration.GetSection("ApiSettings:baseUrl").Value)
+});
+
+//Services Layer
+builder.Services.AddScoped<IDepartamento, DepartamentoService>();
 
 var app = builder.Build();
 
