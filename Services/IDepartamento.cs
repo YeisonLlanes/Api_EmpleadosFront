@@ -10,8 +10,8 @@ namespace primerApiFront.Services
 
         Task<bool> CreateDpto(Departamento dpto);
 
-        Task<bool> EditDpto(Departamento dpto);
+        Task<bool> EditDpto(int id, Departamento dpto);
 
-        Task<bool> DeleteDepartamentoAsync(int idDepartamento);
+        Task<bool> DeleteDpto(int idDepartamento);
     }
 }

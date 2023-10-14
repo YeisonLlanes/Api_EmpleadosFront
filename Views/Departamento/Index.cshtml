@@ -7,8 +7,9 @@
 <h1>Departamentos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-success" >Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -31,9 +32,9 @@
                 @Html.DisplayFor(modelItem => item.descripcion)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Edit", "Edit", new { id=item.idDepartamento }) |
+                    @Html.ActionLink("Details", "Details", new { /*=item.idDepartamento*/  }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.idDepartamento })
             </td>
         </tr>
 }
